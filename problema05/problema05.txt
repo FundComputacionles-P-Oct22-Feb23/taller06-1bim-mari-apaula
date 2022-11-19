@@ -1,0 +1,38 @@
+INICIO
+
+contador, i(0 - 5) <-- 0
+nombre, x(60)[ {a - z}, {A - Z}, {BS} ]
+promedio, d[ 0 - n]
+calificacion, x(15)[ {a - z}, {A - Z}]
+mensaje, x(100000)[ {a - z}, {A - Z}, {BS} ] <--  " "
+
+ Mientras contador < 4 entonces
+      << "Ingrese el nombre del estudiente"
+      >> nombre
+      << "Ingrese el promedio del estudiante"
+      >> promedio
+
+      contador <-- contador + 1
+
+      Si promedio > = 7 entonces 
+            calificacion <-- "Aprobado"
+      De lo contrario
+            calificacion <-- "Reprobado"
+      Fin Si
+
+      mensaje <-- mensaje + nombre + "\t" + contador + "\t" + promedio +"\t" + calificacion + "\n"
+
+ Fin Mientras
+
+<< mensaje
+
+FIN 
+
+
+
+
+
+
+
+
+FIN 

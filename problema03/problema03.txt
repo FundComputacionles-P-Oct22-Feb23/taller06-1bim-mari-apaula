@@ -1,0 +1,24 @@
+INICIO
+
+nombre, x(500)[ {a - z}, {A - Z}, {BS} ]
+dias_trabajados, i[0 - n] 
+costo_dia, d[ 0 - n] 
+valor_cancelar, d[ 0 - n] 
+mensaje, x(500)[ {a - z}, {A - Z}, {BS} ] <--  "  "
+contador, i[0-5] <-- 0
+
+ Mientras contador <= 4 entonces
+      << "Ingrese el nombre del empleado"
+      >> nombre
+      << "Ingrese el número de días trabajados"
+      >> dias_trabajados
+      << "Ingrese el costo de un día de trabajo"
+      >> costo_dia
+      valor_cancelar <-- costo_dia * dias_trabajados
+      mensaje <-- mensaje + nombre + "\t" + dias_trabajados + "\t" + "$" + costo_dia + "\t" + "$" + valor_cancelar + "\n"
+       
+      contador <-- contador + 1
+
+ Fin Mientras
+<< mensaje
+FIN

@@ -1,0 +1,40 @@
+INICIO
+
+nombre, x(50)[{a - z}, {A - Z}, {BS} ]
+posicion, x(50)[ {a - z}, {A - Z}, {BS}]
+edad, i[0 - n] 
+estatura, d[ 0 - n] 
+bandera, l <-- true 
+opcion, x(1)[ {a - z} ] 
+mensaje, x(100000)[ {a - z}, {A - Z}, {BS} ] <--  " "
+promedio_ edad, d[0 - n] <-- " "
+promedio_estatura, d(0 - n ) <--  "  "
+contador, i(0 - n) <--  0
+
+ Mientras bandera ==  true entonces
+      << "Ingrese el nombre del jugador"
+      >> nombre
+      << "Ingrese la posición en el campo de juego"
+      >> posicion
+      << "Ingrese la edad"
+      >> edad
+      << "Ingrese la estatura"
+      >> estatura
+      contador <-- contador + 1
+      promedio_edad <-- promedio_edad + edad
+      promedio_estatura <-- promedio_estatura + estatura
+      mensaje <-- mensaje + contador + "." + "\t" + nombre + "\t" + posicion + "-," +"\t" + "edad" + "-," + "\t" +  edad + "," + "\t" + "estatura" + "\t" + estatura + "\n"
+      << "Desea terminar el proceso. Ingrese s para salir" 
+      >> opcion
+      Si opcion es == "s" entonces
+            bandera <-- false
+      Fin Si
+
+ Fin Mientras
+
+promedio_edad  <-- promedio_edad / contador
+promedio_estatura <-- promedio_estatura / contador
+
+<< "Listado de Jugadores" + "\n" + mensaje + "\n" + "Promedio de edades:" + "\t" + promedio_edad + "\n" + "Promedio de estaruras:" + "\t" + promedio_estaturas
+
+FIN 

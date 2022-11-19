@@ -1,0 +1,24 @@
+INICIO
+
+numero, i[ 0 - n] <-- 1
+contador, i[ 0 - n] <-- 1
+total, d[ 0 - n] <-- " "
+mensaje, x(1000)[ {a - z}, {A - Z}, {BS} ] 
+
+ Mientras contador < = 10 entonces
+      Si contador MOD 2 = = 0 entonces 
+            total <-- "+" + numero + "/" + contador
+            contador <-- contador + 1
+
+      De lo contrario
+            total <-- "-" + numero + "/" + contador
+            contador <-- contador + 1
+      Fin Si
+
+mensaje <-- mensaje + total
+
+Fin Mientras
+
+<< mensaje
+
+FIN 

@@ -1,0 +1,34 @@
+INICIO
+
+contador, i[ 0 - n] <-- 0
+nombre, x(30)[ {a - z}, {A - Z}, {BS} ]
+cliente, i[ 0 - n]
+costo_computadora, d[ 0 - n]
+total_pagar, d[ 0 - n]
+mensaje, x(100000)[ {a - z}, {A - Z}, {BS} ] 
+
+ Mientras contador < 7 entonces
+      << "Ingrese el nombre del cliente"
+      >> nombre
+      << "Ingrese el conto de la computadora"
+      >> costo_computadora
+      << "Ingrese el tipo de cliente"
+      >> cliente
+
+      contador <-- contador + 1
+
+      Si cliente = = entonces 
+            total_pagar <-- costo_computadora - (costo_computadora * 0.10)
+      De lo contrario
+            Si clinete == 2 entonces 
+            total_pagar <-- costo_computadora - (costo_computadora * 0.20)
+            Fin Si
+      Fin Si
+
+      mensaje <-- mensaje + "▪" + " \t" +"Nombre del cliente" + " \t" + nombre + " \n" + "▪" + " \t" + "Costo de la computadora" + " \t" + costo_computadora + " \n" + "▪" + " \t" + "Tipo de cliente" + " \t" + "Cliente tipo" + " \t" + cliente + ", compra una computadora con precio $" + tatal_pagar + " \n"
+
+Fin Mientras
+
+<< mensaje
+
+FIN 

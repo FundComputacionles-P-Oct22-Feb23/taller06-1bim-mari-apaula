@@ -1,0 +1,17 @@
+INICIO
+
+numero1, i[5 - 31] <-- 5
+numero2, i[10 - 21] <-- 10
+mensaje, x(500)[ {a-z}, {BS} ] <--  "  "
+contador, i[0-5] <-- 0
+
+ Mientras contador <= 5 entonces
+      mensaje <-- mensaje + numero1 + "\" + numero2 + "\n"
+      numero1 <-- numero1 + 5
+      numero2 <-- numero2 + 2
+      contador <-- contador + 1
+ Fin Mientras
+<< mensaje
+FIN
+  
+GET    
